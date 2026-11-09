@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics in Historical Linguistics</title>
+  <meta name="description" content="Advanced Topics in Historical Linguistics curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/historical-linguistics/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics in Historical Linguistics">
+  <meta property="og:description" content="Advanced Topics in Historical Linguistics curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/historical-linguistics/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/historical-linguistics/">Historical Linguistics</a></li>
+      <li><a href="/historical-linguistics/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="https://github.com/hocbigg/historical-linguistics" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-in-historical-linguistics">Advanced Topics in Historical Linguistics</h1>
+<p>Learners completing the core curriculum should select one or two specialization tracks below that align with their analytical interests and research goals; there is no expectation to study every track.</p>
+<ul>
+<li><strong>Indo-European Studies and Proto-Language Reconstruction</strong> — Comprehensive specialization in Indo-European comparative grammar, phonological systems, ancient language translation, and linguistic paleontology.</li>
+<li><strong>Computational and Phylogenetic Historical Linguistics</strong> — Quantitative cladistics, Bayesian phylogenetic tree inference, automated cognate detection, and algorithmic sequence comparison.</li>
+<li><strong>Language Contact, Creolistics, and Areal Linguistics</strong> — Structural borrowing mechanisms, pidgin and creole genesis, substrate influence, and convergence zones (Sprachbünde).</li>
+<li><strong>Sociolinguistics of Language Change and Socio-Historical Linguistics</strong> — Variationist modeling of language change in progress, social network transmission, and corpus-based historical sociolinguistics.</li>
+<li><strong>Etymology, Epigraphy, and Philological Methods</strong> — The forensic craft of tracing word histories, deciphering ancient writing systems, and applying textual criticism to manuscript traditions.</li>
+</ul>
+<h2 id="indo-european-studies-and-proto-language-reconstruction">Indo-European Studies and Proto-Language Reconstruction</h2>
+<p>Advanced study of the Indo-European family, combining archaic language reading, comparative phonology, and the reconstruction of prehistoric culture.</p>
+<p>Ancient Indo-European Grammars: <a href="https://spw.uni-goettingen.de/projects/aig/" target="_blank" rel="noopener noreferrer">glottothèque: Ancient Indo-European Grammars Online (University of Göttingen)</a> - an open-access video lecture library providing systematic grammatical breakdowns across 12 ancient Indo-European languages, recorded by leading specialists.</p>
+<p>Comparative Indo-European Phonology and Morphology: <a href="https://books.google.com/books?isbn=9789027211866" target="_blank" rel="noopener noreferrer">Comparative Indo-European Linguistics: An Introduction, 2nd edition (Robert S.P. Beekes, rev. Michiel de Vaan)</a> - the primary structural textbook for this track, featuring 66 problem sets covering ablaut, nominal paradigms, and laryngeal theory.</p>
+<p>Archaic Textual Reading: <a href="https://lrc.la.utexas.edu/eieol" target="_blank" rel="noopener noreferrer">Early Indo-European Online (Linguistics Research Center, UT Austin)</a> - provides structured, 10-lesson graded readers with interlinear glosses and grammatical commentaries for ancient languages including Hittite, Old Church Slavonic, Gothic, and Old Irish.</p>
+<p>Proto-Indo-European Culture and Linguistic Paleontology: <a href="https://books.google.com/books?isbn=9780199287918" target="_blank" rel="noopener noreferrer">The Oxford Introduction to Proto-Indo-European and the Proto-Indo-European World (J.P. Mallory and D.Q. Adams)</a> - the definitive synthesis of reconstructed Proto-Indo-European vocabulary with archaeological evidence, material culture, and steppe homeland debates.</p>
+<h2 id="computational-and-phylogenetic-historical-linguistics">Computational and Phylogenetic Historical Linguistics</h2>
+<p>The application of phylogenetic algorithms, sequence alignment, and quantitative modeling to language evolution and classification.</p>
+<p>Statistical and Bayesian Phylolinguistics: <a href="https://books.google.com/books?isbn=9781107184718" target="_blank" rel="noopener noreferrer">Computational Phylogenetics: An Introduction to Designing Methods for Phylogeny Estimation (Tandy Warnow)</a> - an authoritative guide to designing algorithms and statistical models (MCMC, maximum likelihood, and distance methods) for inferring evolutionary trees from character data.</p>
+<p>Computer-Assisted Language Comparison: <a href="https://calc.hypotheses.org" target="_blank" rel="noopener noreferrer">Computer-Assisted Language Comparison in Practice (CALC / Johann-Mattis List)</a> - an open-access tutorial platform offering hands-on workflows and Python code for automated sequence alignment, cognate detection, and sound law induction.</p>
+<p>Foundations of Computational Historical Linguistics: <a href="https://arxiv.org/abs/1805.08099" target="_blank" rel="noopener noreferrer">Computational Historical Linguistics (Gerhard Jäger, arXiv)</a> - an open-access survey that demonstrates automated cognate recognition, ancestral state reconstruction, and phylogenetic tree inference using Romance language data.</p>
+<p>Phylogenetic Methods and Character Modeling: <a href="https://tandy.cs.illinois.edu/cphl.html" target="_blank" rel="noopener noreferrer">Tutorial on Computational Linguistic Phylogeny (Johanna Nichols and Tandy Warnow)</a> - an open project guide surveying linguistic character types, evolutionary assumptions, and the mechanics of language family tree construction.</p>
+<h2 id="language-contact-creolistics-and-areal-linguistics">Language Contact, Creolistics, and Areal Linguistics</h2>
+<p>The investigation of non-genetic language evolution, focusing on structural diffusion, contact varieties, and convergence zones.</p>
+<p>Contact-Induced Grammatical Change: <a href="https://books.google.com/books?isbn=9780199207831" target="_blank" rel="noopener noreferrer">Grammars in Contact: A Cross-Linguistic Typology (Alexandra Y. Aikhenvald and R.M.W. Dixon, eds.)</a> - an essential volume presenting typological frameworks and field case studies of contact-induced grammatical restructuring across Amazonia, Australia, and the Balkans.</p>
+<p>Mechanisms and Scales of Language Contact: <a href="https://books.google.com/books?isbn=9780878408542" target="_blank" rel="noopener noreferrer">Language Contact: An Introduction (Sarah G. Thomason)</a> - the foundational text detailing the borrowing scale, mechanisms of contact-induced change, and criteria for distinguishing shift-induced interference from borrowing.</p>
+<p>Pidgin and Creole Genesis: <a href="https://ocw.mit.edu/courses/24-908-creole-languages-and-caribbean-identities-spring-2017/" target="_blank" rel="noopener noreferrer">Creole Languages and Caribbean Identities (Prof. Michel DeGraff, MIT OpenCourseWare)</a> - an open university course evaluating theories of creole genesis, language contact under plantation economies, and comparative morphosyntax.</p>
+<p>Areal Typology and Linguistic Areas: <a href="https://books.google.com/books?isbn=9781107051614" target="_blank" rel="noopener noreferrer">The Cambridge Handbook of Areal Linguistics (Raymond Hickey, ed.)</a> - a comprehensive handbook covering areal convergence methodology, feature diffusion, and major world Sprachbünde.</p>
+<h2 id="sociolinguistics-of-language-change-and-socio-historical-linguistics">Sociolinguistics of Language Change and Socio-Historical Linguistics</h2>
+<p>The study of language change in progress and its transmission across social networks, using both modern speech communities and historical text archives.</p>
+<p>Social Mechanisms and Transmission of Change: <a href="https://books.google.com/books?isbn=9780631179153" target="_blank" rel="noopener noreferrer">Principles of Linguistic Change, Volume 2: Social Factors (William Labov)</a> - the seminal monograph analyzing the curvilinear pattern, the role of gender in innovation, social stratification, and the spread of linguistic change across communities.</p>
+<p>Archival Socio-Historical Linguistics: <a href="https://books.google.com/books?isbn=9781138951327" target="_blank" rel="noopener noreferrer">Historical Sociolinguistics: Language Change in Tudor and Stuart England (Terttu Nevalainen and Helena Raumolin-Brunberg)</a> - a landmark text establishing how to apply variationist sociolinguistic methods to historical letter collections and textual corpora across social strata.</p>
+<p>Digital Methods in Historical Sociolinguistics: <a href="https://campus.dariah.eu/resource/posts/historical-sociolinguistics" target="_blank" rel="noopener noreferrer">Historical Sociolinguistics (Tanja Säily, DARIAH-Campus)</a> - an open-access video masterclass demonstrating how to combine historical corpora, social metadata, and computational tools to analyze language variation in the past.</p>
+<p>Empirical Models of Variation and Change: <a href="https://ocw.mit.edu/courses/24-914-language-variation-and-change-spring-2019/" target="_blank" rel="noopener noreferrer">Language Variation and Change (Prof. Edward Flemming, MIT OpenCourseWare)</a> - an advanced university course with lecture notes and problem sets covering phonetic variation, phonological change, and quantitative models of language change in progress.</p>
+<h2 id="etymology-epigraphy-and-philological-methods">Etymology, Epigraphy, and Philological Methods</h2>
+<p>The methodological tools required to trace lexical histories, decipher ancient scripts, and critically evaluate historical textual transmission.</p>
+<p>Principles of Etymological Research: <a href="https://books.google.com/books?isbn=9780199691616" target="_blank" rel="noopener noreferrer">The Oxford Guide to Etymology (Philip Durkin)</a> - written by the chief etymologist of the Oxford English Dictionary, this is the authoritative practical guide to evaluating cognates, loanword chronologies, and semantic development.</p>
+<p>Decipherment and Epigraphic Systems: <a href="https://books.google.com/books?isbn=9780500281055" target="_blank" rel="noopener noreferrer">The Story of Decipherment: From Egyptian Hieroglyphs to Maya Script (Maurice Pope)</a> - an essential examination of the intellectual history, linguistic principles, and structural methods behind the decipherment of major ancient writing systems.</p>
+<p>Textual Criticism and the Philological Method: <a href="https://book.unibo.it/courses/course-v1:UNIBO+DEH16+aa_24-25/about" target="_blank" rel="noopener noreferrer">Scholarly Editing: An Introduction to Textual Criticism (University of Bologna / BOOK Open Knowledge)</a> - an open-access MOOC teaching core philological principles, including manuscript transmission, copying error taxonomy, stemma reconstruction, and critical apparatus preparation.</p>
+<p>Manuscript Transmission and Textual History: <a href="https://books.google.com/books?isbn=9780199686339" target="_blank" rel="noopener noreferrer">Scribes and Scholars: A Guide to the Transmission of Greek and Latin Literature, 4th edition (L.D. Reynolds and N.G. Wilson)</a> - a seminal text tracing how handwritten texts survived from antiquity and how textual corruption is identified and rectified to reconstruct earlier linguistic stages.</p>
+    </article>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Hocbigg - Historical Linguistics</title>
+  <meta name="description" content="Path to a free self-taught education in Historical Linguistics.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/historical-linguistics/">
+  <meta property="og:title" content="Hocbigg - Historical Linguistics">
+  <meta property="og:description" content="Path to a free self-taught education in Historical Linguistics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/historical-linguistics/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/historical-linguistics/">Historical Linguistics</a></li>
+      <li><a href="/historical-linguistics/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="https://github.com/hocbigg/historical-linguistics" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+<header class="page-header">
+  <img src="/images/logo.png" alt="Hocbigg logo">
+  <h1>Hocbigg - Historical Linguistics</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Historical Linguistics.</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-07">2026-10-07</time></small></p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>Historical linguistics—also known as diachronic linguistics—is the scientific investigation of how and why languages change over time. Rather than treating language as a static set of rules, this discipline approaches speech as a dynamic system that evolves across generations. By analyzing systematic shifts in pronunciation, grammar, and meaning, historical linguists can determine genealogical relationships between languages, trace their divergence into families, and reconstruct ancestral proto-languages spoken millennia before the invention of writing. Studying this field unlocks the unwritten history of human migration, cultural contact, and cognitive change preserved directly within everyday vocabulary and grammar.</p>
+<p>This curriculum is designed for independent, self-directed learners with no prior formal training in linguistics. While no academic background is assumed, this is not a casual survey of word origins or language trivia; it is an undergraduate-level foundation focused on methodological rigor. You will learn to transcribe speech sounds, analyze inflectional paradigms, and solve comparative reconstruction puzzles. If you want to understand how Latin diverged into the Romance languages, why English irregular verbs persist, or how scholars reconstructed the lost vocabulary of Proto-Indo-European from daughter tongues scattered between Ireland and India, this curriculum provides the tools to answer those questions systematically.</p>
+<h3 id="organization">Organization</h3>
+<p>Historical linguistics is strictly cumulative. You cannot reconstruct a proto-language without identifying regular sound correspondences, and you cannot identify sound correspondences without understanding phonetics and phonology. Because each subject builds directly on the previous one, you should work through this curriculum in the order presented:</p>
+<ul>
+<li><strong>Descriptive Foundations:</strong> You will begin with the descriptive toolkit of general linguistics: articulatory phonetics, the International Phonetic Alphabet (IPA), phonemic contrast, and morphological segmentation. These tools provide the vocabulary needed to describe language change accurately.</li>
+<li><strong>Subsystems of Change:</strong> You will next explore how languages change internally across each linguistic level—sound systems, morphological paradigms, syntactic constructions, and semantic values. This phase also introduces language contact and borrowing, teaching you how to distinguish borrowed words from inherited vocabulary.</li>
+<li><strong>Reconstruction and Classification:</strong> With a firm grasp of how languages change, you will study the discipline's central scientific methodologies: the Comparative Method and Internal Reconstruction. You will learn how to group languages into genealogical families, establish subgrouping criteria via shared innovations, and model divergence using tree and wave frameworks.</li>
+<li><strong>Capstone Application:</strong> The curriculum concludes with an in-depth case study of Proto-Indo-European, demonstrating how comparative reconstruction, sound laws, and archaeological evidence integrate to illuminate prehistoric speech communities.</li>
+</ul>
+<h3 id="scope">Scope</h3>
+<p>This page covers only the mandatory foundational core that every student of historical linguistics must understand before specializing. It focuses on the primary mechanisms of change and classic comparative methodology rather than specialized research techniques or regional specializations. </p>
+<p>Once you have mastered these core subjects, you can branch out into specialized subfields on the <a href="advanced_topics.html">Advanced Topics</a> page (such as computational phylogenetics, creolistics, historical sociolinguistics, or ancient philology).</p>
+<h2 id="curriculum">Curriculum</h2>
+<h3 id="linguistic-foundations-phonetics-phonology-and-morphology">Linguistic Foundations: Phonetics, Phonology, and Morphology</h3>
+<p>A prerequisite subject introducing the speech sound production, phonetic transcription, phonemic contrast, and morphological analysis required before analyzing diachronic language data.</p>
+<p><a href="https://ecampusontario.pressbooks.pub/essentialsoflinguistics2" target="_blank" rel="noopener noreferrer">Essentials of Linguistics, 2nd edition (Anderson et al., eCampusOntario)</a> - the primary open-access textbook for this preparatory stage; work through Chapter 3 (Phonetics), Chapter 4 (Phonology), and Chapter 5 (Morphology) to master the International Phonetic Alphabet, phonemes, allophones, and morpheme segmentation.</p>
+<p><a href="https://ocw.mit.edu/courses/24-900-introduction-to-linguistics-spring-2022" target="_blank" rel="noopener noreferrer">MIT OCW 24.900 Introduction to Linguistics (Prof. Norvin Richards)</a> - a complementary lecture series for learners who prefer instructor-led video walkthroughs; watch Lectures 2–4 for morphology, Lectures 5–6 for phonetics, and Lectures 8–10 for phonology and rule notation.</p>
+<h3 id="sound-change-and-phonological-evolution">Sound Change and Phonological Evolution</h3>
+<p>The physical and cognitive mechanisms by which pronunciation shifts across generations, forming the empirical foundation of diachronic phonology.</p>
+<p><a href="https://www.youtube.com/playlist?list=PLD11358A8871F8587" target="_blank" rel="noopener noreferrer">NativLang — Intro to Historical Linguistics: How Languages Change (YouTube playlist)</a> - an accessible four-part animated series introducing regular sound shift and language divergence; watch Lesson 1 as a visual primer before tackling formal textbook readings.</p>
+<p><a href="https://books.google.com/books?isbn=9781138954366" target="_blank" rel="noopener noreferrer">Trask's Historical Linguistics, 4th edition (R.L. Trask, revised by Robert McColl Millar)</a> - the primary textbook reading for this subject; study Chapter 3 for a systematic breakdown of assimilation, dissimilation, lenition, chain shifts, Grimm's Law, and the Neogrammarian hypothesis of sound change regularity.</p>
+<h3 id="morphological-and-syntactic-change">Morphological and Syntactic Change</h3>
+<p>How grammatical structures, inflectional paradigms, and sentence patterns evolve over time through analogical remodeling, reanalysis, and grammaticalization.</p>
+<p><a href="https://books.google.com/books?isbn=9781474463126" target="_blank" rel="noopener noreferrer">Campbell's Historical Linguistics: An Introduction, 4th edition (Lyle Campbell)</a> - the primary textbook choice for grammatical change, providing in-depth chapters and practical problem sets on proportional analogy, analogical leveling, reanalysis, and syntactic change across diverse language families.</p>
+<p><a href="https://books.google.com/books?isbn=9781138954366" target="_blank" rel="noopener noreferrer">Trask's Historical Linguistics, 4th edition (R.L. Trask, revised by Robert McColl Millar)</a> - an alternative to Campbell above that covers the same phenomena—analogy, paradigm leveling, and grammaticalization clines—in a more conversational, narrative style.</p>
+<h3 id="semantic-and-lexical-change">Semantic and Lexical Change</h3>
+<p>How word meanings expand, contract, and shift across generations, and how vocabulary is created, altered, and replaced.</p>
+<p><a href="https://books.google.com/books?isbn=9781138954366" target="_blank" rel="noopener noreferrer">Trask's Historical Linguistics, 4th edition (R.L. Trask, revised by Robert McColl Millar)</a> - study Chapter 2 for the standard taxonomy of semantic change, including widening, narrowing, amelioration, pejoration, metaphor, and metonymy, alongside mechanisms of lexical loss.</p>
+<p><a href="https://www.youtube.com/watch?v=5itfLAwQol8" target="_blank" rel="noopener noreferrer">MIT 24.900 — Lecture 23: Historical Linguistics (Prof. Norvin Richards)</a> - a concise recorded lecture that complements the textbook reading with spoken walkthroughs of semantic drift, folk etymology, and morphemic recutting.</p>
+<h3 id="language-contact-and-borrowing">Language Contact and Borrowing</h3>
+<p>The study of how interaction between speech communities drives lexical borrowing, phonological adaptation, structural diffusion, and areal convergence.</p>
+<p><a href="https://books.google.com/books?isbn=9781474463126" target="_blank" rel="noopener noreferrer">Campbell's Historical Linguistics: An Introduction, 4th edition (Lyle Campbell)</a> - read Chapter 3 (Loanwords) and Chapter 10 (Language Contact) for essential diagnostic criteria used to detect borrowed words, determine the direction of borrowing, and identify linguistic areas (Sprachbünde).</p>
+<p><a href="https://books.google.com/books?isbn=9781138954366" target="_blank" rel="noopener noreferrer">Trask's Historical Linguistics, 4th edition (R.L. Trask, revised by Robert McColl Millar)</a> - an alternative textbook option whose chapter on contact and convergence covers lexical borrowing, pidgins, creoles, and convergence zones in an approachable overview.</p>
+<h3 id="the-comparative-method-and-internal-reconstruction">The Comparative Method and Internal Reconstruction</h3>
+<p>The foundational scientific methodologies used to reconstruct unattested ancestral languages by comparing related sister languages and analyzing language-internal morphophonemic alternations.</p>
+<p><a href="https://lx.berkeley.edu/sites/default/files/rankin_comparative_method.pdf" target="_blank" rel="noopener noreferrer">The Comparative Method (Robert L. Rankin, UC Berkeley)</a> - an authoritative, open-access handbook chapter providing a rigorous step-by-step exposition of sound correspondences and proto-phoneme reconstruction using Siouan language data.</p>
+<p><a href="https://books.google.com/books?isbn=9781474463126" target="_blank" rel="noopener noreferrer">Campbell's Historical Linguistics: An Introduction, 4th edition (Lyle Campbell)</a> - builds on Rankin above by pairing Chapter 5 on the Comparative Method with Chapter 8 on Internal Reconstruction, providing hands-on data sets and exercises for both reconstruction techniques.</p>
+<p><a href="https://www.youtube.com/playlist?list=PLD11358A8871F8587" target="_blank" rel="noopener noreferrer">NativLang — Intro to Historical Linguistics: How Languages Change (YouTube playlist)</a> - watch Lessons 3 and 4 as a visual supplement illustrating how recurring sound correspondences are isolated across cognate sets to reconstruct proto-forms.</p>
+<h3 id="language-families-subgrouping-and-classification">Language Families, Subgrouping, and Classification</h3>
+<p>How languages are established as genetically related, how genealogical trees are structured through shared innovations, and how alternative models account for dialect diffusion.</p>
+<p><a href="https://books.google.com/books?isbn=9781474463126" target="_blank" rel="noopener noreferrer">Campbell's Historical Linguistics: An Introduction, 4th edition (Lyle Campbell)</a> - study Chapter 6 for the standard treatment of language classification, subgrouping criteria (distinguishing shared innovations from shared retentions), and methodological critiques of distant genetic proposals.</p>
+<p><a href="https://books.google.com/books?isbn=9781138954366" target="_blank" rel="noopener noreferrer">Trask's Historical Linguistics, 4th edition (R.L. Trask, revised by Robert McColl Millar)</a> - a complementary reading in Chapter 7 that contrasts August Schleicher's Tree Model with Johannes Schmidt's Wave Model to explain dialect continua and language divergence.</p>
+<h3 id="case-study-proto-indo-european">Case Study: Proto-Indo-European</h3>
+<p>An in-depth application of historical and comparative methodology to the world's most thoroughly documented language family, connecting linguistic reconstruction to prehistory and archaeology.</p>
+<p><a href="https://www.coursera.org/learn/comparative-indo-european-linguistics" target="_blank" rel="noopener noreferrer">Introduction to Comparative Indo-European Linguistics (Tijmen Pronk, Leiden University / Coursera)</a> - a structured eight-module MOOC examining the major Indo-European branches, sound laws, and the reconstruction of Proto-Indo-European; access all video lectures and reading assignments for free via audit mode.</p>
+<p><a href="https://archive.org/details/horsewheelandlanguage" target="_blank" rel="noopener noreferrer">The Horse, the Wheel, and Language (David W. Anthony, Internet Archive)</a> - a complementary, openly accessible book to read alongside the course, showing how reconstructed Proto-Indo-European vocabulary correlates with archaeological discoveries on the Eurasian steppe.</p>
+    </article>
+  </main>
+
+</body>
+</html>
